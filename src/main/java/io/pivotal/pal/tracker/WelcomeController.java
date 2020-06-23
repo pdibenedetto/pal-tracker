@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
+    @Value("${welcome.message}")
     private final String welcomeMessage;
 
-    public WelcomeController(@Value("${welcome.Message}") String welcomeMessage)
+    // @Autowired is automatically (behind the scenes added)
+    // Error: Could not autowire. No beans of 'String' type found.
+    // This is a runtime error, although, IntelliJ detects it before runtime.
+    public WelcomeController(String welcomeMessage)
     {
         this.welcomeMessage = welcomeMessage;
     }
