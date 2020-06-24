@@ -1,4 +1,8 @@
-package io.pivotal.pal.tracker;
+package io.pivotal.pal.tracker.repository;
+
+import io.pivotal.pal.tracker.LongSequenceGenerator;
+import io.pivotal.pal.tracker.LongSequenceGeneratorImpl;
+import io.pivotal.pal.tracker.model.TimeEntry;
 
 import java.util.ArrayList;
 import java.util.List;

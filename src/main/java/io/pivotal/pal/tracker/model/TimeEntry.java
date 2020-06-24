@@ -1,8 +1,7 @@
-package io.pivotal.pal.tracker;
+package io.pivotal.pal.tracker.model;
 
 import java.time.LocalDate;
 import java.util.Objects;
-import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class TimeEntry {
