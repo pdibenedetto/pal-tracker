@@ -1,9 +1,9 @@
 package io.pivotal.pal.tracker;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
@@ -12,7 +12,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     private final Map<Long, TimeEntry> repository;
 
     public InMemoryTimeEntryRepository() {
-        repository = new HashMap<>();
+        repository = new ConcurrentHashMap<>();
         sequenceGenerator = new LongSequenceGeneratorImpl();
     }
 
