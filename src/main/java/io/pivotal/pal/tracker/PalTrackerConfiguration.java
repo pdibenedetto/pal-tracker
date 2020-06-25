@@ -10,6 +10,9 @@ import javax.sql.DataSource;
 @Configuration
 public class PalTrackerConfiguration {
 
+    //@Bean
+    //public IN
+
     @Bean
     public DataSource getMySqlDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
