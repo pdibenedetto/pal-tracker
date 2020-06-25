@@ -1,4 +1,4 @@
-package io.pivotal.pal.tracker.controller;
+package io.pivotal.pal.tracker;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,8 +28,7 @@ public class EnvController {
     }
 
     @GetMapping("/env")
-    public Map<String, String> getEnv()
-    {
+    public Map<String, String> getEnv() {
         Map<String, String> env = new HashMap<>();
         env.put("PORT", this.port);
         env.put("MEMORY_LIMIT", this.memoryLimit);

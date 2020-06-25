@@ -1,4 +1,4 @@
-package io.pivotal.pal.tracker.controller;
+package io.pivotal.pal.tracker;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,8 +9,7 @@ public class WelcomeController {
 
     private final String welcomeMessage;
 
-    public WelcomeController(@Value("${welcome.message}") String welcomeMessage)
-    {
+    public WelcomeController(@Value("${welcome.message}") String welcomeMessage) {
         this.welcomeMessage = welcomeMessage;
     }
 

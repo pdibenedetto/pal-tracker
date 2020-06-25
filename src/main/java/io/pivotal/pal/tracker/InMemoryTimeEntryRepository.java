@@ -1,8 +1,4 @@
-package io.pivotal.pal.tracker.repository;
-
-import io.pivotal.pal.tracker.LongSequenceGenerator;
-import io.pivotal.pal.tracker.LongSequenceGeneratorImpl;
-import io.pivotal.pal.tracker.model.TimeEntry;
+package io.pivotal.pal.tracker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +40,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public TimeEntry update(long key, TimeEntry timeEntry) {
-        if(this.repository.get(key) == null) {
+        if (this.repository.get(key) == null) {
             return null;
         }
 

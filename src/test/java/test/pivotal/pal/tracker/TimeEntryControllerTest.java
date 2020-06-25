@@ -1,8 +1,8 @@
-package test.pivotal.pal.tracker.controller;
+package test.pivotal.pal.tracker;
 
-import io.pivotal.pal.tracker.model.TimeEntry;
-import io.pivotal.pal.tracker.controller.TimeEntryController;
-import io.pivotal.pal.tracker.repository.TimeEntryRepository;
+import io.pivotal.pal.tracker.TimeEntry;
+import io.pivotal.pal.tracker.TimeEntryController;
+import io.pivotal.pal.tracker.TimeEntryRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
@@ -35,10 +35,10 @@ public class TimeEntryControllerTest {
 
         long timeEntryId = 1L;
         TimeEntry expectedResult = new TimeEntry(timeEntryId,
-                                                projectId,
-                                                userId,
-                                                LocalDate.parse("2017-01-08"),
-                                                8);
+                projectId,
+                userId,
+                LocalDate.parse("2017-01-08"),
+                8);
         doReturn(expectedResult)
                 .when(timeEntryRepository)
                 .create(any(TimeEntry.class));

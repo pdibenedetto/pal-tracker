@@ -1,4 +1,4 @@
-package io.pivotal.pal.tracker.model;
+package io.pivotal.pal.tracker;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -79,7 +79,7 @@ public class TimeEntry {
         if (this == o) return true;
         if (!(o instanceof TimeEntry)) return false;
         TimeEntry timeEntry = (TimeEntry) o;
-        return  id == timeEntry.id &&
+        return id == timeEntry.id &&
                 projectId == timeEntry.projectId &&
                 userId == timeEntry.userId &&
                 hours == timeEntry.hours &&
