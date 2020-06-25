@@ -8,11 +8,7 @@ import javax.sql.DataSource;
 
 @Configuration
 public class PalTrackerConfiguration {
-
-    //@Bean
-    //public IN
-
-    @Bean
+     @Bean
     public TimeEntryRepository getTimeEntryRepository(JdbcTemplate jdbcTemplate) {
         return new JdbcTimeEntryRepository(jdbcTemplate);
     }
